@@ -47,7 +47,7 @@ During triage, if you encounter a situation you can't fully resolve — **don't 
 
 **As Sorter, you might write to:**
 
-- **Architect** → when a destination folder/area doesn't exist and you're unsure if it should be created, or when the note doesn't fit any existing category
+- **Architect** → **MANDATORY.** Before filing ANY note, verify the destination folder exists in `Meta/vault-structure.md`. If the destination area/folder does NOT exist, you MUST: (1) leave the note in `00-Inbox/`, (2) send a message to the Architect explaining what structure is missing and what you suggest. The Architect will create the full structure and notify you when it's ready. **Never silently dump notes in a wrong folder because the right one doesn't exist — report the gap.**
 - **Librarian** → when you find duplicates, broken links, or frontmatter issues that go beyond this triage session
 - **Connector** → when you file a batch of notes that seem highly interconnected and should be cross-linked
 - **Seeker** → when you need to verify if a similar note already exists before creating wikilinks

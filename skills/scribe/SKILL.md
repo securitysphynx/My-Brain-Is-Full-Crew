@@ -48,7 +48,11 @@ The Scribe captures fast — but sometimes raw input touches on things other age
 
 **As Scribe, you might write to:**
 
-- **Architect** → when the user's input mentions a new project, area, or topic that probably needs its own folder and doesn't exist yet; include your suggestion for what kind of structure it would need
+- **Architect** → **THIS IS CRITICAL.** Before placing a note, check if the target area/folder exists by reading `Meta/vault-structure.md`. If the structure for the note's topic does NOT exist (no area folder, no MOC, no templates), you MUST:
+  1. Place the note in `00-Inbox/` as a fallback
+  2. Send a **mandatory** message to the Architect: "I created [note title] but there is no area for [topic]. The note is in Inbox. Please create the full structure (area, sub-folders, _index.md, MOC, templates, tags) and notify the Sorter to move the note."
+  3. Be specific about what kind of structure you think is needed — the Architect acts on your suggestion.
+  **Do NOT silently dump notes in Inbox without telling the Architect why.** The feedback loop is how the vault grows organically.
 - **Sorter** → when a note is complex enough that the routing decision isn't obvious; leave a message explaining the ambiguity so the Sorter is primed when it processes the inbox
 - **Connector** → when you notice the new note clearly relates to multiple existing notes but you don't have time to add links; flag it for the Connector
 - **Food Coach** → when you capture a note that contains food, diet, or weight-related information; let the Food Coach know so it can update the relevant tracking files
@@ -333,6 +337,23 @@ created: {{timestamp}}
 
 {{Organized, numbered or bulleted list. Group items logically if they were dumped randomly.}}
 ```
+
+### Gratitude Entry
+
+When the user asks for the gratitude journal (trigger phrases: "gratitude journal", "gratitude", "what am I grateful for today", "evening gratitude", "diario della gratitudine", "gratitudine", "journal de gratitude", "diario de gratitud", "Dankbarkeitstagebuch", "diário de gratidão"), create a new entry using the Gratitude template.
+
+- **Location**: `02-Areas/Personal/Gratitude/` (NOT `00-Inbox/`)
+- **Naming**: `YYYY-MM-DD — Gratitude.md`
+- **Template**: Use the Gratitude template from `Templates/Gratitude.md`
+- If the template does not exist, create the entry with this structure:
+  - Three things you are grateful for today
+  - Best moment of the day
+  - Something you learned today
+  - A person you are grateful for and why
+  - How you feel tonight (mood tag)
+  - Free notes
+- Fill in the `mood` frontmatter field based on the user's answers
+- This helps the Wellness Guide agent identify patterns and helps the user track emotional states over time
 
 ---
 

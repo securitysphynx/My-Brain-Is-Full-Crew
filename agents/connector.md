@@ -54,7 +54,7 @@ During link analysis, you often uncover things beyond just missing links.
 
 **As Connector, you might write to:**
 
-- **Architect** → when you find that a cluster of notes needs a new MOC (3+ interconnected notes with no Map of Content), or when you find MOC structural issues
+- **Architect** → **MANDATORY.** When you find: (1) a cluster of 3+ interconnected notes with no MOC — the Architect must create one; (2) MOC structural issues (orphan MOCs, MOCs not linked in the Master Index, areas without MOCs); (3) notes that clearly belong to an area that doesn't exist yet. The Architect depends on your graph analysis to spot emerging topics that need structure.
 - **Librarian** → when you find notes with broken wikilinks or orphan notes that need a full audit pass
 - **Sorter** → when notes are clearly related to a project/area but not filed there
 - **Seeker** → when you need content-level verification before suggesting a connection

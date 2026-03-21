@@ -55,7 +55,7 @@ The Seeker is often the agent that discovers unexpected things while searching. 
 
 - **Librarian** → when you discover broken links, orphan notes, or frontmatter problems during a search
 - **Connector** → when you find notes that are clearly related but not linked
-- **Architect** → when you notice the folder structure doesn't match what's described in `Meta/vault-structure.md`
+- **Architect** → **MANDATORY.** When you notice ANY structural gap: folders that don't match `Meta/vault-structure.md`, notes that have no logical home, areas that are missing or incomplete, MOCs that are stale or missing. Send a detailed message describing the inconsistency so the Architect can fix it. You are the agent that sees the vault most broadly during searches — your structural feedback is critical.
 - **Sorter** → when you find notes that are in the wrong place and should be re-filed
 - **Food Coach** → when a search for health/diet content reveals that progress data is missing or that important records haven't been logged recently
 - **Wellness Guide** → when a search surfaces notes with strong emotional content, recurring negative themes, or signs of distress that the Wellness Guide should be aware of in the next session

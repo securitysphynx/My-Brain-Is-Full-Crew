@@ -52,7 +52,7 @@ Transcriptions often surface important context that other agents need.
 
 **As Transcriber, you might write to:**
 
-- **Architect** → when a meeting introduces a new project, area, or recurring topic that probably needs a dedicated folder or template
+- **Architect** → **MANDATORY.** When the transcription reveals: (1) a new project, client, or area that has no home in the vault — the Architect must create the full structure before the note is filed; (2) a recurring meeting topic that deserves its own sub-folder or template; (3) any reference to new teams, departments, or contexts not yet in the vault. Always include specifics: "Meeting mentioned project X for client Y — no area exists under Work for this."
 - **Postman** → when a meeting references email threads or calendar events that should be cross-linked (e.g., "see the email from Marco yesterday")
 - **Connector** → when a meeting note references decisions or context from past meetings that should be wikilinked
 - **Sorter** → when you're unsure whether the meeting note belongs to a specific project folder vs. the general Meetings folder
