@@ -37,7 +37,7 @@ Most "AI + Obsidian" tools are built for **people who already have their life to
 I don't browse Obsidian. I don't drag files around. I don't maintain complex folder structures manually. I just talk to Claude. Everything else happens automatically.
 
 **2. It's not just knowledge management.**
-The Crew includes a **personal food coach** (because my physical health was falling apart too) and a **mental health support agent** trained in CBT, ACT, and Mindfulness (because the two things are connected). These aren't gimmicks — they're agents with real depth that communicate with each other.
+The Crew includes a **healthy eating companion** (because my physical health was falling apart too) and an **emotional wellness guide** (because the two things are connected). These aren't gimmicks — they're agents that coordinate with each other to support your overall wellbeing. Both are opt-in, and both always recommend consulting real professionals.
 
 **3. It speaks your language — literally.**
 The system works in any language. You shouldn't need to think in English to manage your brain. Just talk in Italian, French, German, Spanish, Japanese — whatever feels natural. The agents match you.
@@ -52,6 +52,7 @@ When the food coach notices you're stress-eating, it sends a message to the well
 - PhD students, researchers, academics drowning in papers and commitments
 - Anyone with **brain fog**, or just an overloaded working memory
 - People managing health challenges alongside cognitive work
+- Non-native English speakers who want a system that works in their language
 - Anyone who's tried Obsidian before and gave up because it felt like a second job
 
 If you've ever thought *"I need to get organized, but I'm too exhausted to get organized"* — this is for you.
@@ -85,8 +86,8 @@ Key points:
 | 6 | **Librarian** | Vault Maintenance | Weekly health checks, deduplication, broken link repair, growth analytics |
 | 7 | **Transcriber** | Audio & Meetings | Turns recordings and transcripts into rich, structured meeting notes |
 | 8 | **Postman** | Email & Calendar | Bridges Gmail and Google Calendar with your vault — deadline radar, meeting prep |
-| 9 | **Food Coach** | Diet & Wellness | Personal nutrition coach — meal plans, grocery lists, progress tracking, motivation |
-| 10 | **Wellness Guide** | Mental Health Support | CBT + ACT + Mindfulness — burnout, anxiety, rumination, grounding, sleep |
+| 9 | **Food Coach** | Healthy Eating Companion | Meal ideas, grocery lists, food preferences, general wellness motivation (opt-in) |
+| 10 | **Wellness Guide** | Emotional Wellness | Active listening, grounding techniques, stress support — always recommends professionals (opt-in) |
 
 > **The agents talk to each other.** When the Food Coach notices stress-eating patterns, it flags the Wellness Guide. When the Transcriber processes a meeting, it alerts the Sorter. When the Postman finds emails about a new project, it tells the Architect to create a folder. It's a crew, not a collection of isolated tools.
 
@@ -99,6 +100,88 @@ You talk to Claude  →  The right agent activates  →  Your vault gets updated
 ```
 
 Each crew member is an isolated AI with its own system prompt, tool restrictions, and model assignment. You clone the repo into your vault, run a setup script, and from that moment on you manage everything through conversation. No GUI, no drag-and-drop, no manual file management.
+
+### Architecture
+
+```mermaid
+graph TB
+    User((You))
+    Claude[Claude Code]
+
+    User -->|"talk naturally"| Claude
+    Claude -->|"activates the right agent"| Agents
+
+    subgraph Agents["The Crew"]
+        direction TB
+
+        subgraph Core["Core — Knowledge Management"]
+            Architect["Architect\nVault Setup"]
+            Scribe["Scribe\nNote Capture"]
+            Sorter["Sorter\nInbox Triage"]
+            Seeker["Seeker\nSearch"]
+            Connector["Connector\nKnowledge Graph"]
+            Librarian["Librarian\nVault Health"]
+        end
+
+        subgraph External["Integrations"]
+            Transcriber["Transcriber\nAudio & Meetings"]
+            Postman["Postman\nEmail & Calendar"]
+        end
+
+        subgraph Health["Health & Wellness (opt-in)"]
+            FoodCoach["Food Coach\nMeal Ideas"]
+            Wellness["Wellness Guide\nEmotional Support"]
+        end
+    end
+
+    MessageBoard[("agent-messages.md\n(shared message board)")]
+
+    Agents <-->|"read & write"| MessageBoard
+    Agents <-->|"read & write"| Vault
+
+    subgraph Vault["Your Obsidian Vault"]
+        direction LR
+        Inbox["00-Inbox"]
+        Projects["01-Projects"]
+        Areas["02-Areas"]
+        Resources["03-Resources"]
+        Archive["04-Archive"]
+        Daily["07-Daily"]
+    end
+
+    style User fill:#7c3aed,stroke:#5b21b6,color:#fff
+    style Claude fill:#3b82f6,stroke:#2563eb,color:#fff
+    style MessageBoard fill:#f59e0b,stroke:#d97706,color:#fff
+    style Core fill:#e0e7ff,stroke:#818cf8
+    style External fill:#dbeafe,stroke:#60a5fa
+    style Health fill:#fce7f3,stroke:#f472b6
+```
+
+### Agent Communication Flow
+
+```mermaid
+sequenceDiagram
+    participant U as You
+    participant C as Claude
+    participant T as Transcriber
+    participant S as Sorter
+    participant FC as Food Coach
+    participant WG as Wellness Guide
+    participant MB as agent-messages.md
+
+    U->>C: "Process my meeting recording"
+    C->>T: activates
+    T->>T: transcribes & creates note
+    T->>MB: "new project mentioned → Architect"
+    T->>MB: "follow-up tasks → Sorter"
+
+    U->>C: "I've been stress-eating lately"
+    C->>FC: activates
+    FC->>FC: supportive response
+    FC->>MB: "stress-eating pattern → Wellness Guide"
+
+    Note over S,WG: Next time these agents run,<br/>they check the message board<br/>and act on pending messages
+```
 
 ### Works on both Claude Code CLI and Claude Code Desktop (Cowork)
 
