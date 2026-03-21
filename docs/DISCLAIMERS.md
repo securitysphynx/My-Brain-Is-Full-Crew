@@ -1,0 +1,72 @@
+# Disclaimers & Legal Notices
+
+---
+
+## I'm not an expert
+
+Let me be upfront: **I am not a Claude Code expert.** I'm a PhD researcher who needed help and built something that works for me. This project is an accumulation of personal needs, not a polished product from someone who knows all the best practices.
+
+The code might not be optimal. The prompts might not be perfect. The architecture might make a seasoned Claude developer cringe. **And that's okay.** I'm sharing this because I believe it can help other people in my same situation, not because I think it's the definitive way to do things.
+
+If you know Claude Code better than I do — and chances are you do — **please contribute.** Every PR is welcome. Every suggestion, every critique, every improvement. I want this to get better, and I know it will get better faster with help from people who actually know what they're doing.
+
+---
+
+## On the health and wellness agents
+
+> **This needs to be crystal clear, so I'm going to say it plainly.**
+
+The **Food Coach** and **Wellness Guide** agents are **AI-generated output. Nothing more.** They are not medical professionals. They are not licensed therapists. They are not dietitians. They are language models following instructions I wrote based on my own personal needs.
+
+**I take absolutely no responsibility for the output of these agents.** Specifically:
+
+- The Food Coach agent **does not provide medical advice.** Its meal plans, calorie calculations, and dietary suggestions are AI-generated and may be inaccurate, incomplete, or inappropriate for your specific health situation. **Always consult a real doctor or registered dietitian** before making changes to your diet, especially if you have medical conditions.
+
+- The Wellness Guide agent **does not provide therapy.** It applies techniques from CBT, ACT, and Mindfulness based on publicly available frameworks, but it is **not a substitute for professional mental health care.** It cannot diagnose anything. It should never be your only source of support. **If you are in crisis, contact a real mental health professional or emergency service immediately.**
+
+- The health agents are designed as **personal wellness companions** — think of them as a structured journal with suggestions, not as healthcare providers. They were built because I personally needed help tracking my nutrition and processing my thoughts between therapy sessions. They helped me. They might help you. But they come with **zero guarantees.**
+
+- **No warranty, no liability.** This is an open-source project provided "as is". I am not responsible for any decisions you make based on the output of any agent in this system. Use your own judgment. Consult real professionals for real health decisions.
+
+Both health agents are **opt-in** during onboarding. You can use the Crew purely for knowledge management if you prefer.
+
+---
+
+## General disclaimer
+
+This project is provided **as is, with no warranty of any kind.** I don't guarantee that it works correctly, that it won't lose your notes, or that the agents will behave as described in every situation. It's a personal project that I'm sharing openly. Use it at your own risk, back up your vault, and **please open an issue** if something goes wrong so we can fix it together.
+
+---
+
+## On forks and misuse
+
+This project was built to help people. That's it. It's meant to support overwhelmed individuals in organizing their lives, their health, and their mental wellbeing.
+
+**I take no responsibility for forks, modifications, or derivative works** that use this code for purposes other than its original intent. If someone takes this project and repurposes it to manipulate, deceive, harm, or exploit people in any way — that's on them, not on me. I explicitly condemn any use of this work for malicious purposes, including but not limited to: unauthorized data collection, psychological manipulation, impersonation of medical or mental health professionals, or any form of exploitation.
+
+This is a tool for self-care and personal organization. If you fork it, please keep it that way.
+
+---
+
+## On privacy and data protection (GDPR and applicable laws)
+
+> **Read this carefully before using the Postman agent or any feature that accesses external data sources.**
+
+**This software is designed exclusively for personal, private use on your own data.**
+
+This project can access your Gmail inbox and Google Calendar through MCP connectors, and saves content from those sources as notes inside your local Obsidian vault. **You are solely responsible for ensuring that your use of this software complies with all applicable privacy and data protection laws**, including but not limited to:
+
+- The **EU General Data Protection Regulation (GDPR)** — Regulation (EU) 2016/679
+- The **California Consumer Privacy Act (CCPA)**
+- Any other national or regional data protection legislation applicable to you
+
+**Specifically:**
+
+- **Do not use this software to process personal data of third parties** (clients, patients, colleagues, employees, or any other individuals) without their explicit, informed consent and a lawful basis under applicable law.
+- **Emails and calendar events may contain personal data of other people.** When the Postman agent reads your inbox and saves content to your vault, that data is stored in plaintext on your local filesystem. You are the data controller for any third-party personal data you cause to be processed this way.
+- **This software does not implement any data minimization, pseudonymization, encryption, retention policies, or data subject rights mechanisms.** If you use it to process personal data of others, you must implement these safeguards yourself.
+- **The author of this software is not a data controller or data processor** with respect to any data you process using this tool. The author has no access to your vault, your emails, your calendar, or any other data you process.
+
+**The author provides this software "as is" and accepts no liability whatsoever** for any violation of data protection laws arising from your use of this software, including any fines, penalties, claims, or damages resulting from improper processing of personal data.
+
+**If you are unsure whether your intended use complies with applicable law, do not use the email or calendar features, and consult a qualified legal professional.**
