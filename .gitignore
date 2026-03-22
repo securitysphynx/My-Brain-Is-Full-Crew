@@ -6,5 +6,11 @@ logs/
 .DS_Store
 **/.DS_Store
 Test-SecondBrain/
-# Dev config
+# Dev config — Claude Code artifacts
 .claude/settings.local.json
+.claude/memory/
+.claude/plans/
+.claude/MEMORY.md
+.claude/state.db
+.claude/state.db-wal
+.claude/state.db-shm
