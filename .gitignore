@@ -10,7 +10,4 @@ Test-SecondBrain/
 .claude/settings.local.json
 .claude/memory/
 .claude/plans/
-.claude/MEMORY.md
-.claude/state.db
-.claude/state.db-wal
-.claude/state.db-shm
+.claude/*
